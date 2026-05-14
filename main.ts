@@ -23,7 +23,7 @@ const DEFAULT_SETTINGS: PluginSettings = {
 	githubToken: ''
 }
 
-export const VIEW_TYPE_BROWSER = "plugin-hub-view";
+export const VIEW_TYPE_BROWSER = "extension-hub-view";
 
 interface GithubRepo {
 	full_name: string;
@@ -235,7 +235,7 @@ class GithubService {
 	}
 }
 
-export default class PluginHub extends Plugin {
+export default class ExtensionHub extends Plugin {
 	settings: PluginSettings = DEFAULT_SETTINGS;
 
 	async onload() {
@@ -246,7 +246,7 @@ export default class PluginHub extends Plugin {
 			this.activateView();
 		});
 
-		this.addSettingTab(new PluginHubSettingTab(this.app, this));
+		this.addSettingTab(new ExtensionHubSettingTab(this.app, this));
 
 		this.addCommand({
 			id: 'update-installed-plugins-from-github',
@@ -693,9 +693,9 @@ export default class PluginHub extends Plugin {
 }
 
 class PluginBrowserView extends ItemView {
-	plugin: PluginHub;
+	plugin: ExtensionHub;
 
-	constructor(leaf: WorkspaceLeaf, plugin: PluginHub) {
+	constructor(leaf: WorkspaceLeaf, plugin: ExtensionHub) {
 		super(leaf);
 		this.plugin = plugin;
 	}
@@ -1183,10 +1183,10 @@ class PluginBrowserView extends ItemView {
 	}
 }
 
-class PluginHubSettingTab extends PluginSettingTab {
-	plugin: PluginHub;
+class ExtensionHubSettingTab extends PluginSettingTab {
+	plugin: ExtensionHub;
 
-	constructor(app: App, plugin: PluginHub) {
+	constructor(app: App, plugin: ExtensionHub) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

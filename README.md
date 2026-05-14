@@ -1,4 +1,4 @@
-# PluginHub
+# Extension Hub
 
 By Jan Sandström
 
@@ -21,7 +21,7 @@ An Obsidian plugin that allows you to browse GitHub, the Official Community Arch
 
 ## Installation
 
-1. Create a folder named `PluginHub` inside your vault's `.obsidian/plugins/` directory.
+1. Create a folder named `extension-hub` inside your vault's `.obsidian/plugins/` directory.
 2. Copy `main.js`, `manifest.json`, and `styles.css` into that folder.
 3. Enable the plugin in Obsidian settings.
 
@@ -43,16 +43,16 @@ An Obsidian plugin that allows you to browse GitHub, the Official Community Arch
 
 Settings Panel.
 
-![1_Settings.png](https://github.com/PixeroJan/PluginHub/blob/main/1_Settings.png)
+![1_Settings.png](C:\Users\pixer\Github\obsidian-extension-hub\1_Settings.png)
 
 Search Official Obsidian Plugin archive.
 
-![2_Search_official.jpg](https://github.com/PixeroJan/PluginHub/blob/main/2_Search_official.jpg)
+![2_Search_official.jpg](C:\Users\pixer\Github\obsidian-extension-hub\2_Search_official.jpg)
 
 Search on Github.
 
-![3_Search_github.jpg](https://github.com/PixeroJan/PluginHub/blob/main/3_Search_github.jpg)
+![3_Search_github.jpg](C:\Users\pixer\Github\obsidian-extension-hub\3_Search_github.jpg)
 
 Search the Obsidian Forum.
 
-![4_Search_forum.jpg](https://github.com/PixeroJan/PluginHub/blob/main/4_Search_forum.jpg)
+![4_Search_forum.jpg](C:\Users\pixer\Github\obsidian-extension-hub\4_Search_forum.jpg)
