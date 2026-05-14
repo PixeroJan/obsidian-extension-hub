@@ -81,3 +81,122 @@
     min-height: 120px;
     font-family: var(--font-monospace);
 }
+
+/* ===== Extension Hub layout classes (replaces inline element.style.X) ===== */
+
+.eh-search-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.eh-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.eh-controls-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.eh-update-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.eh-user-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.eh-user-card {
+    border: 1px solid var(--background-modifier-border);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--background-secondary);
+}
+
+.eh-user-card:hover {
+    background-color: var(--background-primary);
+}
+
+.eh-user-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.eh-user-card .eh-user-label {
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.eh-error-text {
+    color: var(--text-error);
+}
+
+.eh-settings-textarea {
+    width: 350px;
+    max-width: 100%;
+    height: 200px;
+}
+
+.eh-set-container {
+    border: 1px solid var(--background-modifier-border);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.eh-set-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.eh-set-name-input {
+    flex-grow: 1;
+}
+
+.eh-set-delete-btn {
+    background-color: var(--text-error);
+    color: white;
+}
+
+.eh-set-plugin-list {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.eh-set-plugin-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.eh-set-remove-btn {
+    padding: 2px 5px;
+}
+
+.eh-set-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.eh-install-set-btn {
+    padding: 4px 12px;
+    font-size: 0.85em;
+}
