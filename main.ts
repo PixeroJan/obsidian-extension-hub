@@ -389,7 +389,8 @@ export default class ExtensionHub extends Plugin {
 	}
 
 	async loadSettings() {
-		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+		const loaded = (await this.loadData()) as Partial<PluginSettings> | null;
+		this.settings = Object.assign({}, DEFAULT_SETTINGS, loaded ?? {});
 		GithubService.setToken(this.settings.githubToken);
 	}
 
@@ -1368,7 +1369,7 @@ class ExtensionHubSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		new Setting(containerEl).setName('Installation Settings').setHeading();
+		new Setting(containerEl).setName('Installation').setHeading();
 
 		new Setting(containerEl)
 			.setName('GitHub API Token (optional)')
